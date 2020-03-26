@@ -1,0 +1,55 @@
+  <view class='head head-height'>
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+      <view class="userinfo">
+        <image class="userinfo-avatar" src="../../image/icon-mine.png" mode="cover"></image>
+        <text class="userinfo-nickname">微信授权</text>
+      </view>
+      <button class="login-button head-height" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <view class="userinfo">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+
+
+  <view class="hr"></view>
+  <view class='item'>
+    <view class="title">帮助教程</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+  </view>
+  <view class="line"></view>
+
+  <view class='item'>
+    <view class="title">购买会员</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class='item'>
+    <view class="title">历史中心</view>
+    <view class="detail2">
+      <text> ></text>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="line"></view>
+  <view class="item">
+    <view class="title">意见反馈</view>
+    <view class="detail2">
+      <text> ></text>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="item">
+    <view class="title">设置中心</view>
+    <view class="detail2">
+      <text> ></text>
+    </view>
+  </view>
+  <view class="hr"></view>

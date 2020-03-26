@@ -1,0 +1,45 @@
+/**index.wxss**/
+button {
+  margin: 10rpx;
+  position: relative;
+}
+.StepView{
+  margin-top: 30rpx;
+  position: relative;
+}
+.line{
+  margin: 0 auto;
+  margin-top: 50rpx;
+  width: 150rpx;
+  height: 2rpx;
+  background-color: #D8D8D8;
+}
+.preview-warp{
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  background-color: #fff;
+  position: relative;
+}
+.prew_video{
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  background-color: #fff;
+  position: relative;
+}
+.upBtu{
+  position: relative;
+}
+.analysisBtu{
+  height: 150rpx;
+  position: relative;
+}
+.HelpView{
+  margin: 10rpx;
+  height: 20rpx;
+  position: relative;
+}
+.prew_video{
+  position: relative;
+}

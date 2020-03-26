@@ -1,0 +1,47 @@
+<!--pages/analysis/index.wxml-->
+<view class="page">
+<!--素材预览显示-->
+    <view class='preview-warp' wx:if="{{urls}}">
+        <image  src='{{urls}}' />
+    </view>
+    <view class="prew_video" hidden="{{chooesVideo==''}}">
+        <video bindfullscreenchange="bindVideoScreenChange" src="{{chooesVideo}}" ></video>
+    </view>
+<!--上传要素四方法布局-->
+    <view class="upBtu">
+        <wux-grids bordered="{{ false }}" col="2">
+            <wux-grid thumb="/image/Photo.png" label="本地图片" bind:click="PhotoUpload"/>
+            <wux-grid thumb="/image/Video.png" label="本地视频" bind:click="VideoUpload" />
+            <wux-grid thumb="/image/UseCamera.png" label="实时要素"bind:click="CreamStartUpload" />
+            <wux-grid thumb="/image/ie.png" label="在线要素" bind:click="IntetnetUpload"/>
+        </wux-grids>
+    </view>
+<!--分析处理按钮-->
+    <view class="analysisBtu">
+        <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" size="small" bindtap="analysis" > 素材识别 </button>
+    </view>
+
+<!--步骤示意栏-->
+<!-->
+    <view class="StepView">
+        <wux-steps current="{{ current }}">
+            <wux-step title="上传要素"></wux-step>
+            <wux-step title="分析处理"></wux-step>
+            <wux-step title="结果显示"></wux-step>
+        </wux-steps>
+     </view>
+<!-- 分割线 -->
+      <view class='line'></view>
+<!--Help me-->
+    <view class="HelpView">
+        <wux-landscape visible="{{ visible2 }}" bind:close="HelpClose" mask="{{ false }}">
+          <image src="https://cdn.skyvow.cn/redpacket.png" style="height: 350px" />
+        </wux-landscape>
+        <view class="HelpBtu">
+          <wux-button size="small"block type="light" bind:click="HelpOpen">我们能做些什么？</wux-button>
+       </view>
+    </view>
+</view>
+
+

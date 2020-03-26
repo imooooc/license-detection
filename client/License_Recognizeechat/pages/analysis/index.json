@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "车牌吊销特案组",
+  "usingComponents": {
+        "wux-icon": "../../dist/icon/index",
+        "wux-grids": "../../dist/grids/index",
+        "wux-grid": "../../dist/grid/index",
+        "wux-white-space": "../../dist/white-space/index",
+        "wux-button": "../../dist/button/index",
+        "wux-progress": "../../dist/progress/index",
+        "wux-steps": "../../dist/steps/index",
+        "wux-step": "../../dist/step/index",
+        "wux-landscape": "../../dist/landscape/index"
+    }
+}
