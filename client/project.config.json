@@ -10,12 +10,14 @@
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-		"coverView": true
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
 	"appid": "wx3bf70787e3ef24e8",
-	"projectname": "license_plate",
+	"projectname": "LicenseRec_Wechat",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
