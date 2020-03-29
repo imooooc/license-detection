@@ -19,10 +19,10 @@ from users.views import HomeView
 from users import urls as users_urls
 from cars import urls as cars_urls
 from operations import urls as operations_urls
-
+import xadmin
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('xadmin/', xadmin.site.urls),
     path('', HomeView.as_view(), name='home'),
     path('users/', include(users_urls)),
     path('cars/', include(cars_urls)),

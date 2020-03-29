@@ -1,0 +1,1 @@
+#-*- coding:utf-8 -*-# Author: Zhu Chen # Organization: 07 LP detection group# Create Time: 2020/03  All rights reservedimport xadminfrom .models import UserCarclass UserCarAdmin(object):    list_display = ['user', 'car', 'add_time']    search_fields = ['user', 'car']    list_filter = ['user', 'car', 'add_time']xadmin.site.register(UserCar, UserCarAdmin)

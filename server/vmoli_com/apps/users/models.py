@@ -12,7 +12,10 @@ class User(models.Model):
     create_time = models.DateTimeField(verbose_name=u'创建时间', default=datetime.now )
 
     class Meta:
-        verbose_name = u'用户',
+        verbose_name = u'用户列表'
         verbose_name_plural = verbose_name
 
 
+    #重写str方法，否则后台管理系统出错
+    def __str__(self):
+        return self.name
