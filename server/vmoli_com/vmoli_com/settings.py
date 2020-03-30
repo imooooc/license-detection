@@ -26,7 +26,7 @@ SECRET_KEY = '24&hr*2rs3s^6oad0$4atd1ua!ee8kbo7kpa*^$&8vo@$wz27l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'operations',
     'users',
     'xadmin',
-    'crispy_forms'
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
