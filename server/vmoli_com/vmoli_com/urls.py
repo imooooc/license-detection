@@ -22,7 +22,7 @@ from operations import urls as operations_urls
 import xadmin
 
 urlpatterns = [
-    path('xadmin/', xadmin.site.urls),
+    path('admin/', xadmin.site.urls),
     path('', HomeView.as_view(), name='home'),
     path('users/', include(users_urls)),
     path('cars/', include(cars_urls)),
