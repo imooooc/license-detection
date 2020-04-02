@@ -22,10 +22,22 @@ from operations import urls as operations_urls
 import xadmin
 
 urlpatterns = [
-    path('admin/', xadmin.site.urls),
+    # 首页
     path('', HomeView.as_view(), name='home'),
+
+    # 用户
     path('users/', include(users_urls)),
+
+    # 车辆
     path('cars/', include(cars_urls)),
+
+    # 用户操作
     path('operations/', include(operations_urls)),
+
+    # 后台管理系统
+    path('admin/', xadmin.site.urls),
+
+    # api管理
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 
 ]

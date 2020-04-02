@@ -5,6 +5,11 @@ from .models import User
 from django.http import HttpResponse, JsonResponse
 import json
 from django.core import serializers
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import viewsets
+from rest_framework import permissions
+from .serializers import UserSerializer
 # Create your views here.
 
 class HomeView(View):
@@ -27,3 +32,10 @@ class UserView(View):
         # create_time
         # openid = '001'
         pass
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]
