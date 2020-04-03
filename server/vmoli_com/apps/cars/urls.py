@@ -1,1 +1,1 @@
-from django.conf.urls import url, includefrom django.urls import pathfrom .views import *urlpatterns = [    # path('', HomeView.as_view(), name='home')]
+from django.conf.urls import url, includefrom django.urls import pathfrom .views import *urlpatterns = [    path('images', ImageList.as_view(), name='images'),    path('images/<int:pk>/', ImageDetail.as_view(), name='image-detail')]

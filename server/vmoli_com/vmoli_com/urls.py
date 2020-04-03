@@ -26,18 +26,18 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
 
     # 用户
-    path('users/', include(users_urls)),
+    path('u/', include(users_urls), name='users'),
 
     # 车辆
-    path('cars/', include(cars_urls)),
+    path('c/', include(cars_urls), name='cars'),
 
     # 用户操作
-    path('operations/', include(operations_urls)),
+    path('o/', include(operations_urls), name='operations'),
 
     # 后台管理系统
     path('admin/', xadmin.site.urls),
 
     # api管理
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
 ]
