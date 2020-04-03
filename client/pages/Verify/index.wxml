@@ -1,0 +1,8 @@
+
+    <view class="VerifyCode">
+      <view class="weui-label">验证码</view>
+          <input class="weui-input" placeholder="请输入验证码" />
+              <view class="weui-cell__ft" style="text-align: left">
+                <wux-vcode bind:change="onChange" />
+          </view>
+      </view>

@@ -1,7 +1,7 @@
 <!--pages/analysis/index.wxml-->
 <view class="page">
 <!--素材预览显示-->
-    <view class='preview-warp' wx:if="{{urls}}">
+    <view  class='preview-warp' wx:if="{{urls}}">
         <image  src='{{urls}}' />
     </view>
     <view class="prew_video" hidden="{{chooesVideo==''}}">
@@ -23,12 +23,12 @@
     </view>
 
 <!--步骤示意栏-->
-<!-->
+
     <view class="StepView">
         <wux-steps current="{{ current }}">
-            <wux-step title="上传要素"></wux-step>
-            <wux-step title="分析处理"></wux-step>
-            <wux-step title="结果显示"></wux-step>
+            <wux-step title="等待上传要素"></wux-step>
+            <wux-step title="等待素材识别"></wux-step>
+            <wux-step title="识别结果显示"></wux-step>
         </wux-steps>
      </view>
 <!-- 分割线 -->

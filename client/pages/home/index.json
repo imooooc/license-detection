@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+      "wux-button": "../../dist/button/index",
+      "wux-landscape": "../../dist/landscape/index",
+      "wux-toast": "../../dist/toast/index"
+  }
 }

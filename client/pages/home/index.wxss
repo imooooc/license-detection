@@ -66,3 +66,9 @@
   border: 1px solid #ccc;
   opacity: 0.2;
 }
+/*按钮图片*/
+.btnImg {
+  margin-right: 8rpx;
+  width: 40rpx;
+  height: 40rpx;
+}

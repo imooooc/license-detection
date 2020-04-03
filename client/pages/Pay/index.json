@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+            "wux-button": "../../dist/button/index",
+            "wux-notification": "../../dist/notification/index"
+  }
+}

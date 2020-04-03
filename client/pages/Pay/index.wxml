@@ -1,0 +1,14 @@
+<!--支付-->
+<functional-page-navigator
+  version="develop"
+  name="requestPayment"
+  args="{{ args }}"
+  bind:success="paymentSuccess"
+  bind:fail="paymentFailed"
+>
+  <button class="payment-button">支付 30 元</button>
+</functional-page-navigator>
+<!--提示-->
+<wux-notification id="wux-notification" />
+<wux-button block type="light" bind:click="showNotification">Help me！为什么我不能直接在平台支付？</wux-button>
+<image src="/image/ZFB.jpg" show-menu-by-longpress="true" mode="aspectFit"></image>

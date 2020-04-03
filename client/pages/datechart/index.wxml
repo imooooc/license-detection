@@ -1,2 +1,38 @@
-<!--pages/datechart/index.wxml-->
-<text>pages/datechart/index.wxml</text>
+<!-- tab框  -->
+<view class="nav_title">
+  <view class="nav_tab">
+  <!-- 如果选中的下表等于当前的索引，就使用active class名，否则class名为common -->
+    <view wx:for="{{list}}" wx:key="list" class="{{selected==index?'active':'common'}}" data-index='{{index}}' bindtap="selected">{{item}}
+  <!-- 如果选中的下表等于当前的索引，就添加下划线 -->   
+      <view class="{{selected==index?'nav_underline':''}}"></view>
+    </view>
+  </view>
+  <!-- tab框显示内容 -->
+  <view wx:if="{{selected == 0}}">
+  <!--表格-->
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">head1</view>
+    <view class="th">head2</view>
+    <view class="th ">head3</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.type}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.type}}</view>
+    </view>
+  </block>
+</view>
+  </view>
+
+  <!-- 待使用 -->
+  <view wx:if="{{selected == 1}}">bbb</view>
+  <!-- 待取消 -->
+  <view wx:if="{{selected == 2}}">ccc</view>
+</view>

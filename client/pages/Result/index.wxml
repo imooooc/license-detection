@@ -1,0 +1,14 @@
+<!--结果显示-->
+    <wux-result
+        title="识别成功"
+        label="经过AI的肝命，结果终于出来了如下所示："
+        extra="Copyright © 2017计科四班 第7组"
+        fixed
+    />
+<!--结果数据-->
+    <wux-wing-blank size="default">
+        <wux-card bordered="{{ false }}" title="车牌号" extra="置信区间" thumb="https://cdn.skyvow.cn/logo.png">
+            <view slot="body">车辆种类</view>
+            <view slot="footer">车辆颜色</view>
+        </wux-card>
+    </wux-wing-blank>

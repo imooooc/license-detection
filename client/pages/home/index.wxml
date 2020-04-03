@@ -1,3 +1,4 @@
+ <!--用户头部-->
   <view class='head head-height'>
     <block wx:if="{{!hasUserInfo && canIUse}}">
       <view class="userinfo">
@@ -13,26 +14,25 @@
       </view>
     </block>
   </view>
-
-
+<!--功能栏-->
+<wux-toast id="wux-toast" />
   <view class="hr"></view>
   <view class='item'>
-    <view class="title">帮助教程</view>
+    <wux-button block type="light" bind:click="ToHistory">历史中心</wux-button>
     <view class="detail2">
       <text>></text>
     </view>
   </view>
   <view class="line"></view>
-
   <view class='item'>
-    <view class="title">购买会员</view>
+   <wux-button block type="light" bind:click="ToVIP">购买会员</wux-button>
     <view class="detail2">
       <text>></text>
     </view>
   </view>
   <view class="hr"></view>
   <view class='item'>
-    <view class="title">历史中心</view>
+   <wux-button block type="light" bind:click="showToastErr">意见反馈</wux-button>
     <view class="detail2">
       <text> ></text>
     </view>
@@ -40,16 +40,24 @@
   <view class="line"></view>
   <view class="line"></view>
   <view class="item">
-    <view class="title">意见反馈</view>
+   <wux-button block type="light" bind:click="showToastErr">设置中心</wux-button>
     <view class="detail2">
       <text> ></text>
     </view>
   </view>
   <view class="line"></view>
   <view class="item">
-    <view class="title">设置中心</view>
+   <wux-button block type="light" open-type="share" bind:click="ShareOther">分享给好友</wux-button>
     <view class="detail2">
       <text> ></text>
     </view>
   </view>
+      <view class="HelpView">
+        <wux-landscape visible="{{ visible2 }}" bind:close="HelpClose" mask="{{ false }}">
+          <image src="https://cdn.skyvow.cn/redpacket.png" style="height: 350px" />
+        </wux-landscape>
+        <view class="HelpBtu">
+          <wux-button size="small"block type="light" bind:click="HelpOpen">帮助教程 —— 我们能做什么？</wux-button>
+       </view>
+    </view>
   <view class="hr"></view>

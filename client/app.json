@@ -1,9 +1,13 @@
 {
   "pages": [
     "pages/analysis/index",
+    "pages/Verify/index",
+    "pages/History/history",
     "pages/home/index",
     "pages/datechart/index",
-    "pages/Camera/Camera"
+    "pages/Camera/Camera",
+    "pages/Result/index",
+    "pages/Pay/index"
   ],
   "tabBar": {
     "custom": true,

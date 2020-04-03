@@ -1,9 +1,11 @@
 const app = getApp();
+import { $wuxToast } from '../../dist/index'
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    visible2: false,//helpflag
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -54,6 +56,49 @@ Page({
         })
       }
     }
+  },
+  //跳转VIP购买页面
+  ToVIP:function(){
+    wx.navigateTo({
+      url: '/pages/Pay/index',
+    })
+  },
+  //跳转History页面
+  ToHistory:function(){
+    wx.navigateTo({
+      url: '/pages/History/history'
+    })
+  },
+  //Help me
+  HelpOpen: function () {
+    this.setData({
+      visible2: true,
+    })
+  },
+  HelpClose: function () {
+    this.setData({
+      visible2: false,
+    })
+  },
+  //未开发功能
+  showToastErr() {
+    $wuxToast().show({
+      type: 'forbidden',
+      duration: 1500,
+      color: '#fff',
+      text: '功能待开发',
+      success: () => console.log('功能待开发')
+    })
+  },
+  //转发功能
+  onShareAppMessage:function(res){
+    if(res.from=='button'){
+      console.log(res.target,res)
+    }
+    return{
+      title:"开启你的车辆探索",
+      path:"pages/Verify/index",
+      imageUrl:"../../image/title.jpg"
+    }
   }
-
 })
