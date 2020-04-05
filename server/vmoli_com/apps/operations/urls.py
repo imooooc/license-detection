@@ -1,1 +1,1 @@
-from django.conf.urls import url, includefrom django.urls import pathfrom .views import *urlpatterns = [    path('', UserCarList.as_view(), name='history')]
+from django.conf.urls import url, includefrom django.urls import pathfrom .views import *urlpatterns = [    path('history/', UserCarList.as_view(), name='history')]
