@@ -25,14 +25,29 @@ class ImageList(APIView):
             image_path = serializer.data.get('source')
             full_path = BASE_DIR + image_path
             print(full_path)
-            tool = PlateRecogTool().run(full_path)
-            plate_tool = tool[0][0]
-            # 查询车辆库是否存在该车，若不存在则创建
+            plate_info = PlateRecogTool(full_path).run()
+            plate = plate_info.get('plate')
+            # 查询车辆库是否存在该车，存在则更新，若不存在则创建
             try:
-                car = Car.objects.get(licence_number=plate_tool)
+                car = Car.objects.get(plate=plate)
+                car.confidence = plate_info.get('confidence', '')
+                car.brand = plate_info.get('brand', '')
+                car.color = plate_info.get('color', '')
+                car.p1 = plate_info.get('p1', '')
+                car.p2 = plate_info.get('p2', '')
+                car.p3 = plate_info.get('p3', '')
+                car.p4 = plate_info.get('p4', '')
+                car.save()
             except Car.DoesNotExist:
-                car = Car.objects.create(licence_number=plate_tool, brand="月球车", color="black",
-                    create_time=datetime.now())
+                car = Car.objects.create(
+                    plate=plate,
+                    brand=plate_info.get('brand',''),
+                    color=plate_info.get('color',''),
+                    p1 = plate_info.get('p1',''),
+                    p2 = plate_info.get('p2',''),
+                    p3 = plate_info.get('p3',''),
+                    p4 = plate_info.get('p4',''),
+                    )
 
             # 将车辆信息填入该图
             Image.objects.filter(id=serializer.data.get('id')).update(car=car)

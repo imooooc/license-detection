@@ -3,11 +3,12 @@ from datetime import datetime
 from users.models import User
 from cars.models import Car
 
+
 # Create your models here.
 class UserCar(models.Model):
     user = models.ForeignKey(User, verbose_name=u'用户', on_delete=models.CASCADE)
     car = models.ForeignKey(Car, verbose_name=u'车辆', on_delete=models.CASCADE)
-    add_time = models.DateTimeField(default=datetime.now, verbose_name=u'添加时间')
+    add_time = models.DateTimeField(verbose_name=u'添加时间', auto_now_add=True)
 
     class Meta:
         verbose_name = u'用户查询表'
