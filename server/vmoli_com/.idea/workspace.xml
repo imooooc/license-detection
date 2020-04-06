@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1970b665-db7e-44ef-b6e1-d59060bb6c26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/cars/plate_recog_tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/operations/migrations/0002_auto_20200405_2159.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/operations/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uwsgi.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vmoli_com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vmoli_com.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cars/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cars/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cars/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cars/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cars/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cars/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cars/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cars/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cars/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cars/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cars/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cars/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cars/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cars/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cars/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2020/04/WechatIMG141.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2020/04/WechatIMG141_ZcnuSsP.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2020/04/WechatIMG142.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2020/04/WechatIMG143.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2020/04/WechatIMG143_RSBK0AD.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2020/04/WechatIMG143_TvmiZiu.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2020/04/v魔力logo.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,48 +21,58 @@
     <session id="-284487238">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="html" value="5" />
+          <entry key="ini" value="1" />
           <entry key="pstat" value="1" />
-          <entry key="py" value="147" />
+          <entry key="py" value="148" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
           <entry key="HTML" value="5" />
+          <entry key="Ini" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="Profiler Session" value="1" />
-          <entry key="Python" value="147" />
+          <entry key="Python" value="148" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="7" />
+          <entry key="gitignore" value="9" />
           <entry key="html" value="265" />
-          <entry key="py" value="9977" />
+          <entry key="ini" value="20" />
+          <entry key="py" value="9981" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="7" />
           <entry key="HTML" value="265" />
-          <entry key="Python" value="9977" />
+          <entry key="Ini" value="20" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="9981" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="576">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -103,12 +82,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uwsgi.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/operations/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="126">
               <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vmoli_com/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2538">
+              <caret line="141" column="1" lean-forward="true" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+              <folding>
+                <element signature="e#310#319#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/cars/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="162">
               <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -201,7 +210,9 @@
         <option value="$PROJECT_DIR$/apps/cars/serializers.py" />
         <option value="$PROJECT_DIR$/apps/cars/views.py" />
         <option value="$PROJECT_DIR$/apps/users/views.py" />
+        <option value="$PROJECT_DIR$/uwsgi.ini" />
         <option value="$PROJECT_DIR$/vmoli_com/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -325,13 +336,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.33793104" visible="true" weight="0.18497577" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.33793104" visible="true" weight="0.1898223" />
       <window_info id="Structure" order="2" sideWeight="0.66206896" side_tool="true" weight="0.17851374" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.427157" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.3069307" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="5" />
@@ -359,10 +371,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/users/xx.py" />
-    <entry file="file:///usr/local/lib/python3.7/site-packages/django/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/functools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -384,9 +392,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/admin.py" />
     <entry file="file://$PROJECT_DIR$/apps/users/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -401,16 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/operations/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/operations/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -419,16 +415,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/apps/cars/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cars/admin.py" />
     <entry file="file://$PROJECT_DIR$/apps/operations/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -436,15 +427,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <element signature="e#124#137#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/operations/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operations/admin.py" />
     <entry file="file://$PROJECT_DIR$/apps/users/menu_sort.py" />
     <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/apps.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -462,9 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1854">
           <caret line="45" column="5" selection-start-line="45" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -588,9 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="e#25#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -598,19 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cars/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#633#665#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -628,19 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cars/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -655,19 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vmoli_com/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="139" column="29" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="29" />
-          <folding>
-            <element signature="e#310#319#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,9 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding>
-            <element signature="e#125#163#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,19 +620,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#125#163#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="576">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operations/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmoli_com/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2538">
+          <caret line="141" column="1" lean-forward="true" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+          <folding>
+            <element signature="e#310#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cars/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cars/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uwsgi.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
