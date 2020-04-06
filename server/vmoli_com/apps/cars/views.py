@@ -41,19 +41,20 @@ class ImageList(APIView):
             except Car.DoesNotExist:
                 car = Car.objects.create(
                     plate=plate,
-                    brand=plate_info.get('brand',''),
-                    color=plate_info.get('color',''),
-                    p1 = plate_info.get('p1',''),
-                    p2 = plate_info.get('p2',''),
-                    p3 = plate_info.get('p3',''),
-                    p4 = plate_info.get('p4',''),
-                    )
+                    confidence=plate_info.get('confidence', ''),
+                    brand=plate_info.get('brand', ''),
+                    color=plate_info.get('color', ''),
+                    p1=plate_info.get('p1', ''),
+                    p2=plate_info.get('p2', ''),
+                    p3=plate_info.get('p3', ''),
+                    p4=plate_info.get('p4', ''),
+                )
 
             # 将车辆信息填入该图
             Image.objects.filter(id=serializer.data.get('id')).update(car=car)
 
-            # 结束后返回data信息
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            # 结束后返回data信息和车辆信息
+            return Response(plate_info, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -78,9 +79,9 @@ class ImageDetail(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, pk, format=None):
-        image = Image.objects.get(pk)
+        image = Image.objects.get(pk=pk)
         image.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response('删除成功', status=status.HTTP_204_NO_CONTENT)
 
 
 class CarList(APIView):
