@@ -1,1 +1,1 @@
-from django.conf.urls import url, includefrom django.urls import pathfrom .views import *urlpatterns = [    # path('', HomeView.as_view(), name='home')]
+from django.conf.urls import url, includefrom django.urls import pathfrom .views import *urlpatterns = [    path('history', UserCarList.as_view(), name='history'),    path('search', Search.as_view(), name='search'),]
