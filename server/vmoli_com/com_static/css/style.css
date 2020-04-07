@@ -17,7 +17,7 @@ time, mark, audio, video {
 	border: 0;
 }
 html,body{
-	font-family: "微软雅黑";
+	/*font-family: "微软雅黑";*/
 	position: relative;
 }
 body{
@@ -60,16 +60,16 @@ li{
 }
 @media only screen and (max-width:992px ) {
 
-	.content{width:100%;padding-left:0px;padding-right:0px;}
+	.content{width:100%;padding-left:0;padding-right:0;}
 	.main .c4 .content div>h1{text-align: center;} 
-	.content .pic1,.content .pic2,.content .word1{margin-left: 0px;margin-right: 0px;}
+	.content .pic1,.content .pic2,.content .word1{margin-left: 0;margin-right: 0;}
 	.c7{display: none;}	
 	.c8 .btn{display: none;}
 	.c10 .a{padding-top: 10px;padding-bottom: 10px;}
 	.c10 .a .hh1{display: none;}
-	.c10 .col-sm-6,.c10 .col-xs-6{padding-left: 0px;padding-right: 0px;	}
+	.c10 .col-sm-6,.c10 .col-xs-6{padding-left: 0;padding-right: 0;	}
 	.c11{display: none;}
-	.c12-1{padding-top:0px;padding-bottom: 25px;overflow: hidden;}
+	.c12-1{padding-top:0;padding-bottom: 25px;overflow: hidden;}
 	
 	.cc1{display: none;}
 	.cc2{display: block;}
@@ -88,8 +88,8 @@ li{
 
 	.container{width:90%;}
 	.content{width:95%;padding-left:10px;padding-right:10px;}
-	.content .pic1{margin-left:-40px;margin-right:0px;}
-	.content .pic2{margin-right:-40px;margin-left:0px;}
+	.content .pic1{margin-left:-40px;margin-right:0;}
+	.content .pic2{margin-right:-40px;margin-left:0;}
 	/*.content .word1{margin-left: 20px; padding-left:40px;padding-right:40px;margin-top: 50px;}
 	.content .word2{padding-left:50px;padding-right:30px;}*/
 	.c9{padding-bottom: 80px;}
@@ -200,7 +200,7 @@ li{
 }
 .c7 .carousel .carousel-control:before {
   color: #444;
-  font-family: 'Glyphicons Halflings';
+  /*font-family: 'Glyphicons Halflings';*/
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -289,17 +289,17 @@ li{
 	margin-right: 35px;
 }
 .hh1{
-	font-family: 微软雅黑;
+	/*font-family: 微软雅黑;*/
 }
 .p1,.p2{
-	font-family: 微软雅黑;
+	/*font-family: 微软雅黑;*/
 	font-size: 18px;
 	color: #696969;
 	padding-top: 10px;
 }
 
 .c8 .btn{
-	font-family: 微软雅黑;
+	/*font-family: 微软雅黑;*/
 	font-size: 16px;
     background-color: rgb(97, 176, 255);
     color: #FFFFFF;
@@ -466,7 +466,7 @@ li{
 	color: #c3c3c3;
 }
 .cover1 .co2{
-	font-family:微軟正黑體; 
+	/*font-family:微軟正黑體; */
 	font-size: 22px;
 	line-height: 35px;
 	padding-bottom: 40px;
@@ -476,7 +476,7 @@ li{
 	display:inline-block;
 	padding:10px 60px;
 	border:1px solid #FFFFFF;
-	font-family: 微軟正黑體;
+	/*font-family: 微軟正黑體;*/
 	font-size:22px;
 	line-height:40px ;
 	color: #FFFFFF;
@@ -524,7 +524,7 @@ li{
 .cover2 .co2-3{
 	display:inline-block;
 	padding:10px 60px;
-	font-family: 微軟正黑體;
+	/*font-family: 微軟正黑體;*/
 	font-size:22px;
 	line-height:40px ;
 	color: #FFFFFF;
