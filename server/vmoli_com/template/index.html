@@ -1,306 +1,350 @@
 <!DOCTYPE html>
-<html>
 {% load staticfiles %}
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link rel="stylesheet" href={% static "css/bootstrap.css"%} />
-		<link rel="stylesheet" href={% static "css/daohang.css"%} />
-		<link rel="stylesheet" href={% static "css/style.css" %}/>
-		<link rel="stylesheet" href={% static "css/footer&cbl.css"%} />
-		<script type="text/javascript" src={% static "js/jquery-1.11.3.js" %}></script>
-		<script type="text/javascript" src={% static "js/bootstrap.js"%} ></script>
-    	<script type="text/javascript" src={% static "js/index.js"%}></script>
-		<script type="text/javascript" src={% static "js/templet.js" %}></script>
-		<script type="text/javascript" src={% static "js/hp.js" %}></script>
-		<title></title>
-	</head>
-	<body>
-	<div id="main">
-		<header id="header" data-spy="affix" data-offset-top="70">
-			<nav class="navbar-inverse" id="daohang">
-				<div class="daohang">
-					<div class="navbar-header clearfix">
-						<button type="button" class="zd" id="zd" >
-							<span class="glyphicon glyphicon-align-justify"></span>
-						</button>
-						<a href="#" class="navbar-brand"><img src={% static "img/vmoli4.png" %}/></a>
-					</div>
-					<div class="collapse navbar-collapse" id="daohangtiao">
-						<ul class="nav navbar-nav">
-							<li><a href="homepage.html">首页</a></li>
-							<li><a href="templet.html">模板</a></li>
-							<li><a href="setmeal.html">套餐</a></li>
-							<li><a href="example.html">案例</a></li>
-							<li class="wd1"><a href="">文档</a>
-								<ul class="wd2 clearfix">
-									<li class="pull-left " style="width: 233px;">
-										<p><a href="#" class="a1">教程中心</a></p>
-										<ul class="ul1 pull-left">
-											<li><a href="#">快速入门</a></li>
-											<li><a href="#">绑定域名</a></li>
-											<li><a href="#">网页设计</a></li>
-										</ul>
-										<ul class="ul2 pull-left">
-											<li><a href="#">SEO相关</a></li>
-											<li><a href="#">网站备案</a></li>
-											<li><a href="#">商城在线</a></li>							
-										</ul>
-									</li>
-									<li class="pull-left clearfix" style="width: 219px;">
-										<p><a href="#" class="a1">版本更新日志</a></p>
-										<ul class="ul1"> 
-											<li><a href="#" title="系统升级日志：V4.52">系统升级日志：V4.52</a></li>
-											<li><a href="#" title="系统升级日志：V4.50 & V4.51">系统升级日志：V4.50 ...</a></li>
-											<li><a href="#" title="系统升级日志：V4.49">系统升级日志：V4.49</a></li>
-											<li><a href="#" title="系统升级日志：V4.48">系统升级日志：V4.48</a></li>
-										</ul>										
-									</li>
-									<li class="pull-left clearfix" style="width: 479px;">
-										<p><a href="#" class="a1">建站资讯</a></p>
-										<ul class="ul1">
-											<li><a href="#" title="2017年响应式网站设计中字体排版的新趋势">2017年响应式网站设计中字...</a></li>
-											<li><a href="#" title="如何提高网站的设计感？巧妙的几何图案是个捷径">如何提高网站的设计感？巧妙的...</a></li>
-											<li><a href="#" title="什么是响应式网页布局? 给你五个最经典的例子">什么是响应式网页布局? 给你...</a></li>
-											<li><a href="#" title="干货分享: 几何设计学原理の黄金分割在网页设计中应用">干货分享: 几何设计学原理の...</a></li>
-										</ul>										
-									</li>
-								</ul>
-							</li>
-							<li class="gy1"><a href="">关于</a>
-								<ul class="gy2 clearfix">
-									<li class="pull-left clearfix" style="width: 130px;">
-										<p><a href="#" class="a1">公司介绍</a></p>
-										<ul class="ul1">
-											<li><a href="#">公司介绍</a></li>
-											<li><a href="#">服务条款</a></li>
-											<li><a href="#">法律声明</a></li>
-											<li><a href="#">可接受服务</a></li>
-											<li><a href="#">免责声明</a></li>
-										</ul>										
-									</li>
-									<li class="pull-left clearfix" style="width: 330px;">
-										<p><a href="#" class="a1">荣誉资质</a></p>
-										<table >
-											<tr>
-												<td><a href="#" class="a2"><img src="img/gy04.jpg"/></td>
-												<td><a href="#" class="a2"><img src="img/gy01.jpg"/></td>
-											</tr>
-											<tr>
-												<td><a href="#" class="a2"><img src="img/gy03.jpg"/></td>
-												<td><a href="#" class="a2"><img src="img/gy03.jpg"/></td>
-											</tr>
-										</table>
-									</li>
-									<li class="lianxi pull-left clearfix" style="width: 478px;">
-										<p><a href="#" class="a1">联系客服</a></p>
-										<ul class="col-lg-12 col-md-12">
-											<li><a href="#" class="aa1">客户服务热线</a></li>
-											<li><a href="#" class="aa2">4006-285-729</a></li>
-											<li><a href="#" class="aa1">QQ客户中心</a></li>
-											<li><a href="#" class="aa2">800088546</a></li>
-											<li><a href="#" class="aa1">公司地址</a></li>
-											<li><a href="#" class="aa2">苏州市工业园区加成大厦F4-D2</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wu - Home page of wuwii</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="1075199251,张凯,18772383543,wuwii,追光者w,有梦想的咸鱼,一棵树站在原野上,Slience">
+    <link rel="icon" href="http://blog.wuwii.com/images/favicon.ico?v=5.1.1" type="image/x-icon">
+    <link rel="stylesheet" href="{% static "css/reset.css" %}" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}" media="screen" type="text/css"/>
+    <link rel="stylesheet" href="{% static "css/main.css" %}" media="screen" type="text/css"/>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="svg-defs">
+  <defs>
+    <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <image xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/78881/pattern_141.gif" width="100" height="100" preserveAspectRatio="none"></image>
+    </pattern>
 
-						</ul>
-						<ul class="zcdl nav navbar-nav pull-right">
-							<li><a href="http://127.0.0.1:8000/admin">登录</a></li>
-							<li><a href="register.html">注册</a></li>
-						</ul>
-					</div>
-				</div>
-				<div id="box">
-					<div class="box1 col-sm-2 col-xs-2">
-						<span id="X" class="glyphicon glyphicon-remove pull-right" ></span>
-					</div>
-					<div class="box2 col-sm-10 col-xs-10" >
-						<ul id="ul1"class="clearfix">
-							<li><a href="homepage.html">首页</a></li>
-							<li><a href="templet.html">模板</a></li>
-							<li><a href="setmeal.html">套餐</a></li>
-							<li><a href="example.html">案例</a></li>
-							<li id="wd"><a>文档<i class="glyphicon glyphicon-menu-right"></i></a></li>
-							<li id="gy"><a>关于<i class="glyphicon glyphicon-menu-right"></i></a></li>
-						</ul>
-						<div id="wd1">
-							<ul>
-								<li id="fanhui1"><a>返回上一级</a></li>
-								<li><a>教程中心</a></li>
-								<li><a>建站资讯</a></li>
-								<li><a>更新日志</a></li>
-							</ul>
-						</div>
-						<div id="gy1" >
-							<ul id="ul2">
-								<li id="fanhui2"><a>返回上一级</a></li>
-								<li id="gcxx"><a>公司信息<i class="glyphicon glyphicon-menu-right"></i></a></li>
-								<li><a>荣誉资质</a></li>
-								<li><a>联系客服</a></li>
-							</ul>
-						</div>
-						<div id="gc" >
-							<ul >
-								<li id="fanhui3"><a>返回上一级</a></li>
-								<li><a>公司介绍</a></li>
-								<li><a>服务条款</a></li>
-								<li><a>法律声明</a></li>
-								<li><a>可接受服务</a></li>
-								<li><a>免责声明</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<div class="c">
-			    <img class="img" src="img/child.jpg"/>
-				<div class="video">
-					<video autoplay="autoplay" muted="muted" loop="loop">
-						<source type="video/webm" src={% static "video/video1.webm"%}></source>
-						<source type="video/mp4" src={% static "video/video1.mp4"%}></source>
-					</video>
-				</div>
-				<div class="cover">
-					<div class="container  cc2">
-						<div class="cover2" >
-							<div class="co2-1">
-								<p>自己做网站</p>
-								<p>简单又省钱</p>
-							</div>
-							<div class="co2-2">
-								<span>引领「响应式自助建站」潮流，每一套模板都是艺术品</span>
-							</div>
-							<a class="co2-3" href="" >免 费 创 建 账 户</a>
-						</div>
-					</div>
-					<div class="container cc1">
-						<div class="cover1 col-lg-6 col-md-6 pull-right" >
-							<div class="co1 hide" id="con">
-								<!--<p>做一个响应式网站</p>
-								<p>让世界更好的了解您</p>-->
-								<span>吊销车牌特案组<br>让老司机无所遁形</span>
-							</div>
-							<div class="co1" id="show"></div>
-							<div class="co2" >
-								<p>真「人工智障」车牌检测平台</p>
- 								<p>专业级神经网络算法模型</p>
-							</div>
-							<a class="co3" href="" >免 费 创 建 账 户</a>
-						</div>
-					</div>
-					<div class="container cc1">
-						<div class="coverA"><a href="">
-							<i class="glyphicon glyphicon-chevron-down"></i>
-						</a></div>
-					</div>
-				</div>
-			</div>
-		<div class="main">
-			<div class="c1">
-				<div class="container">
-					<h1 class="hh1" style="font-size: 44px;padding-bottom: 20px;">更快，更简单</h1>
-					<p class="p1" >采用响应式技术构建</p>
-					<p class="p1" >一次编辑，在所有设备下使用</p>
-					<img class="img-responsive" style="margin:0 auto;" src={% static "img/p1-01.jpg" %}/>
-				</div>
-			</div>
-			<div class="c2">
-				<div class="content" style="overflow: hidden;margin: 0 auto;max-width: 2500px;" >
-				  	<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 pull-left pic1 clearfix" id="c2-1" >
-						<img  style="width: 100%;" src={% static "img/p1-02.png"%} />
-				  	</div>
-				 	<div class="w1 col-lg-5 col-md-5 col-sm-12 col-xs-12 pull-left clearfix" id="c2-2">
-				 		<div style="width: 80%;margin: 0 auto;">
-				 			<h1 class="hh1" style="font-size: 34px;padding-bottom: 10px;">特性</h1>
-							<p class="p1" style="font-size: 15px;line-height: 30px;">速度快 720p,单核 Intel 2.2G CPU (MaBook Pro 2015)平均识别时间低于100ms 基于端到端的车牌识别无需进行字符分割 识别率高,卡口场景准确率在95%-97%左右 轻量,总代码量不超1k行</p>
-				 		</div>
-				  	</div>
-				</div>
-			</div>
-			<div class="c3"  id="c3">
-				<div class="content" style="overflow: hidden;margin: 0 auto;max-width: 2500px;">
-					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 pull-right pic2 clearfix" id="c3-2">
-						<img style="width: 100%;" src={% static "img/p1-03.png"%} />
-					</div>
-					<div class="w1 col-lg-5 col-md-5 col-sm-12 col-xs-12 pull-left clearfix" id="c3-1">
-				 		<div style="width: 80%;margin: 0 auto;">
-				 			<h1 class="hh1" style="font-size: 34px;color:#3ea3ff ;padding-bottom: 20px;">模型资源说明</h1>
-							<p class="p1" style="font-size: 15px;line-height: 30px;">cascade.xml 检测模型 - 目前效果最好的cascade检测模型<br>cascade_lbp.xml 召回率效果较好，但其错检太多
-<br>char_chi_sim.h5 Keras模型-可识别34类数字和大写英文字 使用14W样本训练
-<br>char_rec.h5 Keras模型-可识别34类数字和大写英文字 使用7W样本训练
-<br>ocr_plate_all_w_rnn_2.h5 基于CNN的序列模型
-<br>ocr_plate_all_gru.h5 基于GRU的序列模型从OCR模型修改，效果目前最好但速度较慢，需要20ms。
-<br>plate_type.h5 用于车牌颜色判断的模型
-<br>model12.h5 左右边界回归模型</p>
-				 		</div>
-				  	</div>
-				</div>
-			</div>
-			<div class="c4">
-				<div class="content" style="overflow: hidden;margin: 0 auto;max-width: 2500px;" >
-				 	<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 pull-left pic1 clearfix" id="c4-1">
-						<img  style="width: 100%;" src={% static "img/p1-04.png"%}/>
-				 	</div>
-				 	<div class="w1 col-lg-5 col-md-5 col-sm-12 col-xs-12 pull-left clearfix" id="c4-2">
-						<div style="width: 80%;margin: 0 auto;">
-				 			<h1 class="hh1" style="font-size: 34px;padding-bottom: 20px;">支持多种车牌&双层</h1>
-							<p class="p2" style="font-size: 15px;line-height: 30px;">服务器&网络&全球部署<br>支持多种车牌以及双层
-<br>支持大角度车牌
-<br>轻量级识别模型</p>
-				 		</div>
-				  	</div>
-				</div>
-			</div>
-			<div class="c5" >
-				<div class="content" style="overflow: hidden;margin: 0 auto;max-width: 2500px;">
-					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 pull-right pic2 clearfix" id="c5-2">
-						<img  style="width: 100%;" src={% static "img/p1-05.png"%}/>
-					</div>
-					<div class="w1 col-lg-5 col-md-5 col-sm-12 col-xs-12 pull-left clearfix" id="c5-1">
-						<div style="width: 80%;margin: 0 auto;">
-							<h1 class="hh1" style="font-size: 34px;color:#3ea3ff ;padding-bottom: 20px;">全面的搜索引擎优化 轻松获得更高排名</h1>
-							<p class="p2" style="font-size: 15px;line-height: 30px;">谁说自助建站的SEO效果就一定差？<br/>无需额外设置，平台自动为您生成网站地图（sitemap），帮助搜索引擎全面地对网站进行索引；同时，页面标题、页面描述以及静态化链接技术也可以帮助您更加轻松地获得较高的关键词排名。</p>
-							<a id="ljgd" href="#" style="margin-top: 20px;text-decoration: none;color:#3399ff ;display: none;">了解更多 ></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <g id="shape-butterfly-1">
+      <path class="path" fill="" clip-rule="evenodd" d="M8.65,2.85c0.934-0.2,2.15-0.333,3.65-0.4c1.534-0.1,2.667-0.083,3.4,0.05
+		c1.533,0.267,3.45,0.767,5.75,1.5c2.466,0.8,4.35,1.617,5.65,2.45c2.066,1.2,3.883,2.383,5.45,3.55c2.567,2.1,4.35,3.8,5.35,5.1
+		l2.1,2.5c0.933,1.167,1.517,1.983,1.75,2.45c0.333,0.767,1.083,2.117,2.25,4.05c0.233,0.467,0.717,1.683,1.45,3.65
+		c0.733,2.067,1.2,3.45,1.4,4.15c0.467,1.733,0.917,3.767,1.35,6.1l0.4,3.85l-0.25-3.4c-0.6-5.967-1.267-10.25-2-12.85
+		c-0.733-2.434-2.167-5.467-4.3-9.1c-0.966-1.667-1.566-3-1.8-4c-0.233-0.933-0.1-1.267,0.4-1c1.3,0.733,2.917,3.867,4.85,9.4
+		c1.667,4.7,2.85,11.2,3.55,19.5c0.567,6.934,0.667,11.917,0.3,14.95l0.2,0.05c0.231,0,0.348-0.05,0.35-0.15v0.05l0.1,0.05v27.4
+		c-0.032-0.018-0.065-0.035-0.1-0.05v-0.05c-0.7,0.267-0.983,0.117-0.85-0.45c0.067-0.333,0.017-0.817-0.15-1.45
+		c-0.2-0.6-0.316-0.983-0.35-1.15l-0.5-1.65c-0.533-2.967-0.833-5.034-0.9-6.2c-0.1-1.533-0.133-2.4-0.1-2.6
+		c0-0.933,0.167-1.667,0.5-2.2c0.567-0.9,0.684-1.75,0.35-2.55c-0.167-0.367-0.367-0.6-0.6-0.7c-0.333-0.133-0.517,0.283-0.55,1.25
+		c-0.033,1.533-0.167,2.9-0.4,4.1c-0.1,2.3-0.267,3.684-0.5,4.15c-0.333,0.667-1.25,2.95-2.75,6.85c-1.167,2.8-2.233,4.817-3.2,6.05
+		c-0.9,1.2-1.583,2.1-2.05,2.7c-0.8,1-1.434,1.667-1.9,2c-2.067,1.333-3.633,2.067-4.7,2.2c-3.033,0.267-4.95,0.317-5.75,0.15
+		c-0.8-0.167-1.383-0.217-1.75-0.15c-0.533,0.1-1.033,0.45-1.5,1.05c-0.5,0.667-1.217,1.284-2.15,1.85
+		c-0.934,0.567-1.85,0.934-2.75,1.1c-2.467,0.433-4.45,0.25-5.95-0.55c-0.7-0.4-1.467-1.15-2.3-2.25c-0.6-0.867-1.033-1.567-1.3-2.1
+		c-0.267-0.667-0.483-1.483-0.65-2.45c-0.3-1.467-0.383-2.717-0.25-3.75c0.267-1.9,0.45-3.05,0.55-3.45
+		c0.233-1.233,0.566-2.333,1-3.3C9.25,77.45,9.767,76.4,10,76c0.667-1.233,1.55-2.583,2.65-4.05c1.1-1.434,2.184-2.583,3.25-3.45
+		c0.367-0.3,1.15-0.867,2.35-1.7c0.767-0.566,1.917-1.25,3.45-2.05c1.733-0.933,3.267-1.633,4.6-2.1
+		c2.133-0.733,4.534-1.467,7.2-2.2c0.467-0.1,1.517-0.3,3.15-0.6c0.967-0.233,0.4-0.4-1.7-0.5c-2.434-0.1-4.534-0.3-6.3-0.6
+		c-1.566-0.267-3.383-0.7-5.45-1.3c-2.8-0.8-4.467-1.317-5-1.55c-1.567-0.667-3.2-1.75-4.9-3.25c-1.733-1.533-3-3.1-3.8-4.7
+		c-0.533-1.067-0.967-2.434-1.3-4.1c-0.233-1.067-0.3-2.133-0.2-3.2c0.133-0.833,0.183-1.3,0.15-1.4v-0.6
+		c-2.467-3.233-3.983-5.433-4.55-6.6c-0.533-1.033-0.883-1.833-1.05-2.4c-0.3-0.867-0.466-1.85-0.5-2.95
+		c-0.033-2.367,0.034-4.117,0.2-5.25c0.3-1.034,0.483-1.8,0.55-2.3c0.167-0.867,0.034-1.533-0.4-2c-0.6-0.7-1.133-1.517-1.6-2.45
+		c-0.566-1.133-0.833-2.117-0.8-2.95c0.033-1.333,0.167-2.367,0.4-3.1c0.367-1.267,1.05-2.267,2.05-3
+		C4.417,4.25,6.483,3.317,8.65,2.85z"/>
+    <g>
 
-		<div class="footer">
-			<div class="f2">
-				<div class="container">
-{#					<hr style="width: 100%;border: none;height: 1px;background-color: #E2E2E2;"/>#}
-{#					<p>拓展您的业务，展示您的风采，或者只是尝试一下新的想法。 起飞页自助建站平台，拉近您与互联网的距离！</p>#}
-					<hr style="width: 100%;border: none;height: 1px;background-color: #E2E2E2;"/>
-					<p>版权所有 2017-2020 吊销车牌特案组 <a href="http://www.beian.miit.gov.cn">粤ICP备18070711-5</a> 版本: V1.0</p>
-				</div>
-			</div>
-		</div>
-		
-	
-		<ul class="cbl" >
-			<li><a href="#">
-				<div class="icon d1"><i class="i1"></i><span class="title">在线客服</span></div>
-			</a></li>
-			<i class="clearfix"></i>
-			<li><a href="#">
-				<div class="icon d2"><i class="i2"></i><span class="title">4006285729</span></div>
-			</a></li>
-			<i class="clearfix"></i>
-			<li><a  href="#">
-				<div class="icon"><i class="i3"></i><span class="title">教程中心</span></div>
-			</a></li>
-			<i class="clearfix"></i>
-			<li ><a  href="#">
-				<div class="icon d4" data-toggle="tooltip" data-placement = "left" title="<img src='img/erweima.png'><br/> 关注微信 " data-html="true"><i class="i4"></i></div>
-			</a></li>
-		</ul>
-	</div>
-	</body>	
-	
+  </defs>
+</svg>
+<section class="background"></section>
+<section class="scene3d">
+    <div class="cube skybox">
+        <var class="scale">
+            <figure class="face front"></figure>
+            <figure class="face back"></figure>
+            <figure class="face right"></figure>
+            <figure class="face left"></figure>
+            <figure class="face top"></figure>
+            <figure class="face bottom"></figure>
+        </var>
+    </div>
+    <div class="butterfly_container">
+        <var class="rotate3d">
+            <var class="scale">
+                <var class="translate3d">
+                    <var class="translate3d-1">
+                        <figure class="butterfly">
+                            <svg class="wing left" viewBox="0 0 50 100" class="icon shape-codepen">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                            <svg class="wing right" viewBox="0 0 50 100" class="icon shape-codepen">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                        </figure>
+                    </var>
+                </var>
+            </var>
+        </var>
+    </div>
+    <div class="butterfly_container"
+         style="margin-top: -150px; margin-left: 140px;
+              -webkit-animation-duration: 5s;
+              -moz-animation-duration: 5s;
+              -ms-animation-duration: 5s;
+              -o-animation-duration: 5s;
+              animation-duration: 5s;">
+        <var class="rotate3d">
+            <var class="scale">
+                <var class="translate3d">
+                    <var class="translate3d-1">
+                        <figure class="butterfly">
+                            <svg class="wing left" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                            <svg class="wing right" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                        </figure>
+                    </var>
+                </var>
+            </var>
+        </var>
+    </div>
+    <div class="butterfly_container scale_half"
+         style="margin-top: -10px; margin-left: 50px;
+              -webkit-animation-duration: 5s;
+              -moz-animation-duration: 5s;
+              -ms-animation-duration: 5s;
+              -o-animation-duration: 5s;
+              animation-duration: 5s;">
+        <var class="rotate3d">
+            <var class="scale">
+                <var class="translate3d">
+                    <var class="translate3d-1">
+                        <figure class="butterfly">
+                            <svg class="wing left" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                            <svg class="wing right" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                        </figure>
+                    </var>
+                </var>
+            </var>
+        </var>
+    </div>
+    <div class="butterfly_container scale_half"
+         style="margin-top: 20px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+        <var class="rotate3d">
+            <var class="scale">
+                <var class="translate3d">
+                    <var class="translate3d-1">
+                        <figure class="butterfly">
+                            <svg class="wing left" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: 1s;
+                  -moz-animation-duration: 1s;
+                  -ms-animation-duration: 1s;
+                  -o-animation-duration: 1s;
+                  animation-duration: 1s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                            <svg class="wing right" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: 1s;
+                  -moz-animation-duration: 1s;
+                  -ms-animation-duration: 1s;
+                  -o-animation-duration: 1s;
+                  animation-duration: 1s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                        </figure>
+                    </var>
+                </var>
+            </var>
+        </var>
+    </div>
+    <div class="butterfly_container scale_half"
+         style="margin-top: 100px; margin-left: 50px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+        <var class="rotate3d">
+            <var class="scale">
+                <var class="translate3d">
+                    <var class="translate3d-1">
+                        <figure class="butterfly">
+                            <svg class="wing left" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: 1.2s;
+                  -moz-animation-duration: 1.2s;
+                  -ms-animation-duration: 1.2s;
+                  -o-animation-duration: 1.2s;
+                  animation-duration: 1.2s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                            <svg class="wing right" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: 1.2s;
+                  -moz-animation-duration: 1.2s;
+                  -ms-animation-duration: 1.2s;
+                  -o-animation-duration: 1.2s;
+                  animation-duration: 1.2s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                        </figure>
+                    </var>
+                </var>
+            </var>
+        </var>
+    </div>
+    <div class="butterfly_container scale_third"
+         style="margin-top: 150px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+        <var class="rotate3d">
+            <var class="scale">
+                <var class="translate3d">
+                    <var class="translate3d-1">
+                        <figure class="butterfly">
+                            <svg class="wing left" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: .35s;
+                  -moz-animation-duration: .35s;
+                  -ms-animation-duration: .35s;
+                  -o-animation-duration: .35s;
+                  animation-duration: .35s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                            <svg class="wing right" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: .35s;
+                  -moz-animation-duration: .35s;
+                  -ms-animation-duration: .53s;
+                  -o-animation-duration: .35s;
+                  animation-duration: .35s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                        </figure>
+                    </var>
+                </var>
+            </var>
+        </var>
+    </div>
+    <div class="butterfly_container scale_third"
+         style="margin-top: -250px; margin-left: 300px;
+              -webkit-animation-duration: 4s;
+              -moz-animation-duration: 4s;
+              -ms-animation-duration: 4s;
+              -o-animation-duration: 4s;
+              animation-duration: 4s;">
+        <var class="rotate3d">
+            <var class="scale">
+                <var class="translate3d">
+                    <var class="translate3d-1">
+                        <figure class="butterfly">
+                            <svg class="wing left" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: .45s;
+                  -moz-animation-duration: .45s;
+                  -ms-animation-duration: .45s;
+                  -o-animation-duration: .45s;
+                  animation-duration: .45s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                            <svg class="wing right" viewBox="0 0 50 100"
+                                 style="-webkit-animation-duration: .45s;
+                  -moz-animation-duration: .45s;
+                  -ms-animation-duration: .45s;
+                  -o-animation-duration: .45s;
+                  animation-duration: .45s;">
+                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                            </svg>
+                        </figure>
+                    </var>
+                </var>
+            </var>
+        </var>
+    </div>
+</section>
+<div class="menu showmsg">
+    <a class="animate-init click" rel="noopener noreferrer" href="https://vmoli.com">www.vmoli.com</a>
+{#    <a class="animate-init click" rel="external nofollow noopener noreferrer">2017-2020</a>#}
+    <a class="animate-init" rel="external nofollow noopener noreferrer" href="https://gitee.com/weijizhu/license-detection">@吊销车牌特案组</a>
+    <div class="location">
+        <i class="location-icon"></i>
+        <span class="location-text animate-init"><a href="http://www.beian.miit.gov.cn"> 粤ICP备18070711号</a></span>
+    </div>
+</div>
+<div class="relocating">
+    Navigating to: <span class="relocate-location"></span>...
+</div>
+</body>
+<script type="text/javascript" src="{% static "js/index.js" %}"></script>
+<script>
+    $(document).ready(function () {
+        var delay = 1;
+        var DELAY_STEP = 200;
+        var animationOptions = {opacity: 1, top: 0};
+
+        $('h1').animate(animationOptions).promise()
+            .pipe(animateMain)
+            .pipe(animateLocationIcon);
+
+        function animateMain() {
+            var dfd = $.Deferred();
+            var els = $('.animate-init');
+            var size = els.size();
+
+            els.each(function (index, el) {
+                delay++;
+                $(el).delay(index * DELAY_STEP)
+                    .animate(animationOptions);
+                (size - 1 === index) && dfd.resolve();
+            });
+            return dfd.promise();
+        }
+
+        function animateLocationIcon() {
+            $('.location-icon').delay(delay * DELAY_STEP).animate({
+                opacity: 1,
+                top: 0
+            }).promise().done(animationQuote);
+        }
+
+        function animationQuote() {
+        }
+
+        $(".click:contains(Blog)").on('click', function (event) {
+            $('.relocate-location').text('Blog Home Page');
+            $('.relocating').css('opacity', 1);
+
+            window.setTimeout(function () {
+                window.location.href = 'http://blog.wuwii.com';
+            }, 1000);
+        });
+        $(".click:contains(Github)").on('click', function (event) {
+            $('.relocate-location').text('My Github Page');
+            $('.relocating').css('opacity', 1);
+
+            window.setTimeout(function () {
+                window.location.href = 'https://github.com/kaimz';
+            }, 1000);
+        });
+    });
+</script>
 </html>
