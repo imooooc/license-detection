@@ -20,7 +20,8 @@ from users import urls as users_urls
 from cars import urls as cars_urls
 from operations import urls as operations_urls
 import xadmin
-
+from django.conf.urls.static import static
+from vmoli_com import settings
 urlpatterns = [
     # 首页
     path('', HomeView.as_view(), name='home'),
@@ -40,5 +41,4 @@ urlpatterns = [
     # api管理
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-]
-# hhh
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
