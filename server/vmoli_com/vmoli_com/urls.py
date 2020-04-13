@@ -19,9 +19,12 @@ from users.views import HomeView
 from users import urls as users_urls
 from cars import urls as cars_urls
 from operations import urls as operations_urls
+from app1 import urls as app1_urls
 import xadmin
 from django.conf.urls.static import static
 from vmoli_com import settings
+from users.views import page_not_found, permission_denied, page_error
+import com_static
 urlpatterns = [
     # 首页
     path('', HomeView.as_view(), name='home'),
@@ -41,4 +44,10 @@ urlpatterns = [
     # api管理
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
+    # app1
+    path('a/', include(app1_urls), name='app1')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler403 = permission_denied
+handler404 = page_not_found
+handler500 = page_error

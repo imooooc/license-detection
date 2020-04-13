@@ -41,9 +41,11 @@ INSTALLED_APPS = [
     'cars',
     'operations',
     'users',
+    'app1',
     'xadmin',
     'crispy_forms',
     'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -136,6 +138,7 @@ STATICFILES_DIRS = (
 
 STATIC_URL = '/static/'
 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -143,3 +146,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 5
 }
+
+# 设置邮箱
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.126.com"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "weijizhu@126.com"
+EMAIL_HOST_PASSWORD = "GVNKBCMYJMBPLTWC"
+EMAIL_USE_TLS= False
+EMAIL_FROM = "weijizhu@126.com"
+EMAIL_USE_SSL = False

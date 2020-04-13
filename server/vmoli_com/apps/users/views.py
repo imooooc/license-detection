@@ -16,9 +16,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import Http404
-
-
-# Create your views here.
+from django.contrib.auth.hashers import make_password
 
 class HomeView(View):
     def get(self, request):
@@ -63,3 +61,14 @@ class UserDetail(APIView):
         user = self.get_object(pk)
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+def page_not_found(request, exception):
+    return render(request, '404.html')
+
+
+def page_error(request):
+    return render(request, '500.html')
+
+
+def permission_denied(request, exception):
+    return render(request, '403.html')
