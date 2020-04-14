@@ -13,9 +13,9 @@ class UserProfileAdmin(object):
 
 
 class EmailVeriRecordAdmin(object):
-    list_display = ['code', 'email', 'send_time', 'exprie_time', 'email_type']
-    search_fields = ['code', 'email', 'send_time', 'exprie_time', 'email_type']
-    list_filter = ['code', 'email', 'send_time', 'exprie_time', 'email_type']
+    list_display = ['code', 'email', 'send_time', 'expire_time', 'email_type']
+    search_fields = ['code', 'email', 'send_time', 'expire', 'email_type']
+    list_filter = ['code', 'email', 'send_time', 'expire_time', 'email_type']
 
 
 xadmin.site.register(UserProfile, UserProfileAdmin)

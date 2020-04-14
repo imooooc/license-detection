@@ -1,1 +1,1 @@
-from django.urls import pathfrom .views import *urlpatterns = [    path('email', VarifyEmaliView.as_view(), name='email'),    path('register', RegisterView.as_view(), name='register')]
+from django.urls import pathfrom .views import *urlpatterns = [    path('verify-email', VerifyEmaliView.as_view(), name='verify_email'),    path('register', RegisterView.as_view(), name='register'),    path('password/modify', ModifyPasswordView.as_view(), name='modify_password'),    path('password/forget', ForgetPasswordView.as_view(), name='forget_password')]

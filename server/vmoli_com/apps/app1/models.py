@@ -50,10 +50,10 @@ class EmailVeriRecord(models.Model):
     send_time = models.DateTimeField(auto_now_add=True, verbose_name='发送时间', null=True, blank=True)
 
     # 过期时间
-    exprie_time = models.DateTimeField(null=True)
+    expire_time = models.DateTimeField(null=True, verbose_name='过期时间')
 
     # 邮件类型
-    email_type = models.CharField(choices=(('register', '注册邮件'), ('forget', '找回密码')), max_length=10)
+    email_type = models.CharField(choices=(('register', '注册邮件'), ('forget', '找回密码')), max_length=10, verbose_name='邮件类型')
 
     class Meta:
         verbose_name = '邮件验证码'
