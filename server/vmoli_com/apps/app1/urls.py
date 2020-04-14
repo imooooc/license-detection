@@ -1,1 +1,1 @@
-from django.urls import pathfrom .views import *urlpatterns = [    path('email', EmaliView.as_view(), name='email'),    path('register', RegisterView.as_view(), name='register')]
+from django.urls import pathfrom .views import *urlpatterns = [    path('email', VarifyEmaliView.as_view(), name='email'),    path('register', RegisterView.as_view(), name='register')]
