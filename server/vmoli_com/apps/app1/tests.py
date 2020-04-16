@@ -1,6 +1,10 @@
+# -*- coding:utf-8 -*-
+# Author: Zhu Chen
+# Organization: 07 LP detection group
+# Create Time: 2020/04  All rights reserved
+
 from django.test import TestCase
 
-# Create your tests here.
 data = {'user_name':'张三', 'email':'1@1.com', 'password':'123', 're_password':'123'}
 
 class myclass():

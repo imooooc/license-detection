@@ -1,3 +1,8 @@
+# -*- coding:utf-8 -*-
+# Author: Zhu Chen
+# Organization: 07 LP detection group
+# Create Time: 2020/04  All rights reserved
+
 from django.shortcuts import render
 from .models import Car, Image
 from rest_framework.decorators import APIView
@@ -5,7 +10,7 @@ from .serializers import ImageSerializer, CarSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
-from .plate_recog_tool import PlateRecogTool
+from utils.plate_recog_tool import PlateRecogTool
 from vmoli_com.settings import BASE_DIR
 from datetime import datetime
 

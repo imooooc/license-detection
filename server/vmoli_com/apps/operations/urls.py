@@ -1,1 +1,1 @@
-from django.conf.urls import url, includefrom django.urls import pathfrom .views import *urlpatterns = [    path('history', UserCarList.as_view(), name='history'),    path('search', Search.as_view(), name='search'),]
+# -*- coding:utf-8 -*-# Author: Zhu Chen# Organization: 07 LP detection group# Create Time: 2020/04  All rights reservedfrom django.conf.urls import url, includefrom django.urls import pathfrom .views import *urlpatterns = [    path('history', UserCarList.as_view(), name='history'),    path('search', Search.as_view(), name='search'),]

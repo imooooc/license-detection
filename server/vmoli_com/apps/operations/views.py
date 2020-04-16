@@ -1,3 +1,8 @@
+# -*- coding:utf-8 -*-
+# Author: Zhu Chen
+# Organization: 07 LP detection group
+# Create Time: 2020/04  All rights reserved
+
 from django.shortcuts import render
 from cars.models import Image, Car
 from .serializers import UserCarSerializer
@@ -26,7 +31,7 @@ class UserCarList(APIView):
 
 class Search(APIView):
     def get(self, request, format=None):
-        q = request.query_params.get('q','')
+        q = request.query_params.get('q', '')
         imgs = Image.objects.filter(car__plate__iexact=q)
         serializer = ImageSerializer(imgs, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)

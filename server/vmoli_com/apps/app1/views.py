@@ -1,3 +1,8 @@
+# -*- coding:utf-8 -*-
+# Author: Zhu Chen
+# Organization: 07 LP detection group
+# Create Time: 2020/04  All rights reserved
+
 from django.shortcuts import render
 from django.views.generic.base import View
 from rest_framework.views import APIView
@@ -10,6 +15,7 @@ import base64
 import re
 from django.contrib.auth.hashers import make_password, check_password
 import random, string
+import datetime
 
 
 class VerifyEmaliView(APIView):
@@ -19,7 +25,7 @@ class VerifyEmaliView(APIView):
 
     def get(self, request):
 
-        q = request.query_params.get('q', '')  # q = 'c=aociegAfpODIRJofO&m=imoocbook@163.com&t=registerOrforget'
+        q = request.query_params.get('q', '')  # q = 'c=aociegAfpODIRJofO&m=xxx@xxxx.com&t=registerOrforget'
 
         # 解码
         dq = base64.decodebytes(q.encode('utf8'))
@@ -34,8 +40,8 @@ class VerifyEmaliView(APIView):
 
             instance = EmailVeriRecord.objects.filter(email=m).order_by('-send_time')[0]
 
-            # 核对验证码
-            if instance.code == c:
+            # 核对验证码以及过期时间
+            if instance.code == c and instance.expire_time > datetime.datetime.now():
                 # 根据不同邮件类型进行相应操作
                 # 用户注册
                 if t == 'register':
@@ -166,4 +172,4 @@ class ForgetPasswordView(APIView):
 
             except UserProfile.DoesNotExist:
                 return Response({'msg': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-        return Response({'msg':serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'msg': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)

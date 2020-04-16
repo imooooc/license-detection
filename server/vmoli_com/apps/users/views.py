@@ -1,3 +1,7 @@
+# -*- coding:utf-8 -*-
+# Author: Zhu Chen
+# Organization: 07 LP detection group
+# Create Time: 2020/04  All rights reserved
 from django.shortcuts import render
 from django.views.generic.base import View
 from django.shortcuts import render
@@ -17,6 +21,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import Http404
 from django.contrib.auth.hashers import make_password
+
 
 class HomeView(View):
     def get(self, request):
@@ -61,6 +66,7 @@ class UserDetail(APIView):
         user = self.get_object(pk)
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 def page_not_found(request, exception):
     return render(request, '404.html')

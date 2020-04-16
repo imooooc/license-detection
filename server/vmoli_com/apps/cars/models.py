@@ -1,3 +1,8 @@
+# -*- coding:utf-8 -*-
+# Author: Zhu Chen
+# Organization: 07 LP detection group
+# Create Time: 2020/04  All rights reserved
+
 from django.db import models
 from datetime import datetime
 from users.models import User
@@ -20,13 +25,15 @@ from users.models import User
 
 class Car(models.Model):
     plate = models.CharField(max_length=10, verbose_name=u'车牌号', unique=True)
-    confidence = models.CharField(max_length=20,verbose_name=u'置信度', null=True)
-    p1 = models.IntegerField(verbose_name=u'p1',null=True)
-    p2 = models.IntegerField(verbose_name=u'p2',null=True)
-    p3 = models.IntegerField(verbose_name=u'p3',null=True)
-    p4 = models.IntegerField(verbose_name=u'p4',null=True)
-    brand = models.CharField(max_length=10, verbose_name=u'品牌',null=True)
-    color = models.CharField(max_length=10, choices=(("black", "黑色"), ("white", "白色"), ("red", "红色"),("blue", "蓝色"),("green", "绿色"),("gray", "灰色"),("yellow", "黄色"),("brown", "棕色")),
+    confidence = models.CharField(max_length=20, verbose_name=u'置信度', null=True)
+    p1 = models.IntegerField(verbose_name=u'p1', null=True)
+    p2 = models.IntegerField(verbose_name=u'p2', null=True)
+    p3 = models.IntegerField(verbose_name=u'p3', null=True)
+    p4 = models.IntegerField(verbose_name=u'p4', null=True)
+    brand = models.CharField(max_length=10, verbose_name=u'品牌', null=True)
+    color = models.CharField(max_length=10, choices=(
+    ("black", "黑色"), ("white", "白色"), ("red", "红色"), ("blue", "蓝色"), ("green", "绿色"), ("gray", "灰色"), ("yellow", "黄色"),
+    ("brown", "棕色")),
         verbose_name=u'颜色', null=True)
     create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
 
