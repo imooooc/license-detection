@@ -26,7 +26,7 @@ class CommentsAdmin(object):
                 css_class='unsort no_title'
             ),
             Fieldset('Content',
-                'user', 'user_name', 'user_email', 'user_url', 'comment'
+                'user', 'username', 'user_email', 'user_url', 'comment'
             ),
         ),
         Side(
@@ -39,7 +39,7 @@ class CommentsAdmin(object):
     list_display = ('name', 'content_type', 'object_pk', 'ip_address', 'submit_date', 'is_public', 'is_removed')
     list_filter = ('submit_date', 'site', 'is_public', 'is_removed')
     ordering = ('-submit_date',)
-    search_fields = ('comment', UsernameSearch(), 'user_name', 'user_email', 'user_url', 'ip_address')
+    search_fields = ('comment', UsernameSearch(), 'username', 'user_email', 'user_url', 'ip_address')
     actions = ["flag_comments", "approve_comments", "remove_comments"]
     model_icon = 'fa fa-comment'
 

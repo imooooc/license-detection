@@ -1,4 +1,8 @@
 """
+-*- coding:utf-8 -*-
+Author: Zhu Chen
+Organization: 07 LP detection group
+Create Time: 2020/04  All rights reserved
 WSGI config for vmoli_com project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.

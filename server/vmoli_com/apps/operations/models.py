@@ -22,3 +22,4 @@ class UserCar(models.Model):
 
     def __str__(self):
         return '第{x}条记录'.format(x=self.id)
+

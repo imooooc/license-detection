@@ -16,6 +16,7 @@ from cars.serializers import CarSerializer, ImageSerializer
 
 
 class UserCarList(APIView):
+    '用户查询车辆历史记录'
     def get(self, request, format=None):
         items = UserCar.objects.all()
         serializer = UserCarSerializer(items, many=True)
@@ -30,6 +31,9 @@ class UserCarList(APIView):
 
 
 class Search(APIView):
+    '''
+    搜索车辆的图片信息
+    '''
     def get(self, request, format=None):
         q = request.query_params.get('q', '')
         imgs = Image.objects.filter(car__plate__iexact=q)

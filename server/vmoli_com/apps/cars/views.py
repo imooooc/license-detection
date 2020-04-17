@@ -16,6 +16,9 @@ from datetime import datetime
 
 
 class ImageList(APIView):
+    '''
+    图片列表
+    '''
     def get(self, request, format=None):
         images = Image.objects.all()
         serializer = ImageSerializer(images, many=True)
@@ -24,15 +27,15 @@ class ImageList(APIView):
     def post(self, request, format=None):
         serializer = ImageSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
 
             # 上传图片后开始进行车牌检测
-            image_path = serializer.data.get('source')
+            image_path = serializer.validated_data['source']
             full_path = BASE_DIR + image_path
             print(full_path)
             plate_info = PlateRecogTool(full_path).run()
-            plate = plate_info.get('plate')
+
             # 查询车辆库是否存在该车，存在则更新，若不存在则创建
+            plate = plate_info.get('plate')
             try:
                 car = Car.objects.get(plate=plate)
                 car.confidence = plate_info.get('confidence', '')
@@ -55,8 +58,10 @@ class ImageList(APIView):
                     p4=plate_info.get('p4', ''),
                 )
 
-            # 将车辆信息填入该图
-            Image.objects.filter(id=serializer.data.get('id')).update(car=car)
+            # 将车辆信息填入该图片记录的car字段
+            # Image.objects.filter(id=serializer.data.get('id')).update(car=car)
+            serializer.validated_data['car'] = car
+            serializer.save()
 
             # 结束后返回data信息和车辆信息
             return Response(plate_info, status=status.HTTP_201_CREATED)
@@ -64,6 +69,9 @@ class ImageList(APIView):
 
 
 class ImageDetail(APIView):
+    '''
+    图片详情
+    '''
     def get_object(self, pk):
         try:
             return Image.objects.get(pk=pk)
@@ -90,6 +98,9 @@ class ImageDetail(APIView):
 
 
 class CarList(APIView):
+    '''
+    车辆列表
+    '''
     def get(self, request, format=None):
         car = Car.objects.all()
         serializer = CarSerializer(car, many=True)
@@ -97,6 +108,9 @@ class CarList(APIView):
 
 
 class CarDetail(APIView):
+    '''
+    车辆详情
+    '''
     def get_object(self, pk):
         try:
             car = Car.objects.get(pk=pk)

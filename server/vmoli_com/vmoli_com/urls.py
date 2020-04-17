@@ -1,52 +1,44 @@
-"""vmoli_com URL Configuration
+# -*- coding:utf-8 -*-
+# Author: Zhu Chen
+# Organization: 07 LP detection group
+# Create Time: 2020/04  All rights reserved
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 from users.views import HomeView
 from users import urls as users_urls
 from cars import urls as cars_urls
 from operations import urls as operations_urls
-from app1 import urls as app1_urls
 import xadmin
 from django.conf.urls.static import static
 from vmoli_com import settings
 from users.views import page_not_found, permission_denied, page_error
 import com_static
+from rest_framework.authtoken import views as drf_views
+
 urlpatterns = [
-    # 首页
-    path('', HomeView.as_view(), name='home'),
+                  # 首页
+                  path('', HomeView.as_view(), name='home'),
 
-    # 用户
-    path('u/', include(users_urls), name='users'),
+                  # 用户
+                  path('u/', include(users_urls), name='users'),
 
-    # 车辆
-    path('c/', include(cars_urls), name='cars'),
+                  # 车辆
+                  path('c/', include(cars_urls), name='cars'),
 
-    # 用户操作
-    path('o/', include(operations_urls), name='operations'),
+                  # 用户操作
+                  path('o/', include(operations_urls), name='operations'),
 
-    # 后台管理系统
-    path('admin/', xadmin.site.urls),
+                  # 后台管理系统
+                  path('admin/', xadmin.site.urls),
 
-    # api管理
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+                  # api管理
+                  path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-    # app1
-    path('a/', include(app1_urls), name='app1')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  # 颁发token
+                  path('api-token-auth/', drf_views.obtain_auth_token)
+
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler403 = permission_denied
 handler404 = page_not_found
