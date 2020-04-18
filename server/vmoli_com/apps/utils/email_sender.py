@@ -45,7 +45,7 @@ def send_email(to_email, email_type):
     s = 'c={0}&m={1}&t={2}'.format(email.code, email.email, email.email_type)
     # 对参数进行base64编码
     eq = base64.encodebytes(s.encode('utf8'))
-    verify_url = 'http://127.0.0.1:8000/a/verify-email?q={0}'.format(eq.decode())
+    verify_url = 'https://vmoli.com/verify-email?q={0}'.format(eq.decode())
 
     # 发送邮件
     subject = '尊敬的{0}用户, 您好'.format(to_email)
