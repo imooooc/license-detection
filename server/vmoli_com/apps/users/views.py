@@ -27,9 +27,13 @@ import string
 from django.contrib.auth.hashers import make_password, check_password
 from utils import email_sender
 from rest_framework.permissions import IsAdminUser, IsAuthenticated, AllowAny
-
+from rest_framework.authentication import BasicAuthentication
+import pytz
 
 class HomeView(View):
+    """
+    网站首页
+    """
     def get(self, request):
         return render(request, 'index.html')
 
@@ -59,8 +63,6 @@ class RegisterView(APIView):
     """
     注册用户
     """
-    # 权限设置为允许任何人
-    permission_class = [AllowAny]
 
     def get(self, request):
         return Response({'msg': "接口调用成功！"}, status=status.HTTP_200_OK)
@@ -103,6 +105,7 @@ class UserDetail(APIView):
     """
     用户详情
     """
+    permission_classes = [IsAuthenticated]
 
     def get_object(self, pk):
         try:
@@ -134,9 +137,6 @@ class VerifyEmaliView(APIView):
     验证邮箱
     """
 
-    # 允许任何人
-    permission_classes = [AllowAny]
-
     def get(self, request):
 
         q = request.query_params.get('q', '')  # q = 'c=aociegAfpODIRJofO&m=xxx@xxxx.com&t=registerOrforget'
@@ -155,7 +155,9 @@ class VerifyEmaliView(APIView):
             instance = EmailVeriRecord.objects.filter(email=m).order_by('-send_time')[0]
 
             # 核对验证码以及过期时间
-            if instance.code == c and instance.expire_time > datetime.datetime.now():
+            now = datetime.datetime.now()
+            now = now.replace(tzinfo=pytz.timezone('UTC'))
+            if instance.code == c and instance.expire_time > now:
                 # 根据不同邮件类型进行相应操作
                 # 用户注册
                 if t == 'register':
@@ -227,6 +229,7 @@ class ForgetPasswordView(APIView):
     忘记密码
     email:邮箱
     '''
+
 
     def get(self, request):
         return Response({'msg': '接口调用成功'}, status=status.HTTP_200_OK)
