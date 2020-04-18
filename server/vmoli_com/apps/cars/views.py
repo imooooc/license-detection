@@ -75,7 +75,7 @@ class ImageDetail(APIView):
     '''
     图片详情
     '''
-
+    permission_classes = [IsAuthenticated,IsOwnerOrReadOnly]
     def get_object(self, pk):
         try:
             return Image.objects.get(pk=pk)
@@ -105,7 +105,7 @@ class CarList(APIView):
     '''
     车辆列表
     '''
-
+    permission_classes = [IsAuthenticated,IsOwnerOrReadOnly]
     def get(self, request, format=None):
         car = Car.objects.all()
         serializer = CarSerializer(car, many=True)
@@ -116,7 +116,7 @@ class CarDetail(APIView):
     '''
     车辆详情
     '''
-
+    permission_classes = [IsAuthenticated,IsOwnerOrReadOnly]
     def get_object(self, pk):
         try:
             car = Car.objects.get(pk=pk)

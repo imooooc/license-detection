@@ -13,10 +13,16 @@ from rest_framework import status
 from django.views.generic.base import View
 from django.http import HttpResponse
 from cars.serializers import CarSerializer, ImageSerializer
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 
 class UserCarList(APIView):
-    '用户查询车辆历史记录'
+    """
+    用户查询车辆历史记录
+    """
+
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, format=None):
         items = UserCar.objects.filter(user=request.user)
         serializer = UserCarSerializer(items, many=True)
@@ -31,9 +37,12 @@ class UserCarList(APIView):
 
 
 class Search(APIView):
-    '''
+    """
     搜索车辆的图片信息
-    '''
+    """
+
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, format=None):
         q = request.query_params.get('q', '')
         imgs = Image.objects.filter(car__plate__iexact=q)
