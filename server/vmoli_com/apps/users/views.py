@@ -26,6 +26,7 @@ import random
 import string
 from django.contrib.auth.hashers import make_password, check_password
 from utils import email_sender
+from rest_framework.permissions import IsAdminUser, IsAuthenticated, AllowAny
 
 
 class HomeView(View):
@@ -34,9 +35,12 @@ class HomeView(View):
 
 
 class UserList(APIView):
-    '''
+    """
     用户列表
-    '''
+    """
+
+    # 只有管理员可以使用该接口，普通用户返回403forbidden
+    permission_classes = [IsAdminUser]
 
     def get(self, request, format=None):
         users = User.objects.all()
@@ -52,9 +56,11 @@ class UserList(APIView):
 
 
 class RegisterView(APIView):
-    '''
+    """
     注册用户
-    '''
+    """
+    # 权限设置为允许任何人
+    permission_class = [AllowAny]
 
     def get(self, request):
         return Response({'msg': "接口调用成功！"}, status=status.HTTP_200_OK)
@@ -94,9 +100,9 @@ class RegisterView(APIView):
 
 
 class UserDetail(APIView):
-    '''
+    """
     用户详情
-    '''
+    """
 
     def get_object(self, pk):
         try:
@@ -124,9 +130,12 @@ class UserDetail(APIView):
 
 
 class VerifyEmaliView(APIView):
-    '''
+    """
     验证邮箱
-    '''
+    """
+
+    # 允许任何人
+    permission_classes = [AllowAny]
 
     def get(self, request):
 

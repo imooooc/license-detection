@@ -18,7 +18,7 @@ from cars.serializers import CarSerializer, ImageSerializer
 class UserCarList(APIView):
     '用户查询车辆历史记录'
     def get(self, request, format=None):
-        items = UserCar.objects.all()
+        items = UserCar.objects.filter(user=request.user)
         serializer = UserCarSerializer(items, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
